@@ -1,0 +1,44 @@
+/*
+ * Replace this with your own classes
+ *
+ * e.g.
+ * .container {
+ * }
+*/
+.container {
+  height: 110px;
+  background-color: #fff7ed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0em 2em;
+}
+
+.navbar-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 25.3531px;
+  line-height: 40px;
+}
+
+.container > div {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+}
+
+.container > div > a {
+  text-decoration: none;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 23px;
+  color: #4d4d4d;
+}
+
+.container > div > a:hover {
+  color: #ff8c38;
+  text-decoration: underline;
+}

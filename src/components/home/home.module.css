@@ -1,0 +1,62 @@
+/*
+ * Replace this with your own classes
+ *
+ * e.g.
+ * .container {
+ * }
+*/
+.container {
+  background-image: url('../../assets/home.svg');
+  background-repeat: no-repeat;
+  height: 385px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0em 2em;
+}
+
+.container > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.home-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 42px;
+  color: #ffffff;
+}
+
+.home-subtitle {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.home-button {
+  border: 0;
+  width: 500px;
+  height: 50px;
+  background: #ff8c38;
+  border-radius: 5px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15.9462px;
+  line-height: 32px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.home-button:hover {
+  background: #e17654;
+}

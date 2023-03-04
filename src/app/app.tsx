@@ -1,14 +1,13 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.css';
-
-import NxWelcome from './nx-welcome';
+import { Navbar } from 'src/components/navbar';
+import { Footer } from 'src/components/footer';
+import { About } from 'src/components/about';
 
 export function App() {
   return (
     <>
-      <NxWelcome title="vanlife" />
-
-      <div />
+      <Navbar />
+      <Footer />
     </>
   );
 }

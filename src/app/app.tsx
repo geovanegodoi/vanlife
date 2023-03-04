@@ -1,14 +1,15 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { Navbar } from 'src/components/navbar';
-import { Footer } from 'src/components/footer';
-import { About } from 'src/components/about';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { AboutPage, HomePage } from 'src/pages';
 
 export function App() {
   return (
-    <>
-      <Navbar />
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

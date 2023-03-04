@@ -20,6 +20,16 @@
   font-weight: 900;
   font-size: 25.3531px;
   line-height: 40px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.navbar-title:hover {
+  color: #ff8c38;
+}
+
+.navbar-title:visited {
+  color: #000000;
 }
 
 .container > div {

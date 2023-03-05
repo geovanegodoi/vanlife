@@ -1,0 +1,28 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@vanlife/vanlife/about": ["libs/vanlife/about/src/index.ts"],
+      "@vanlife/vanlife/home": ["libs/vanlife/home/src/index.ts"],
+      "@vanlife/vanlife/shared": ["libs/vanlife/shared/src/index.ts"],
+      "@vanlife/vanlife/shared/shared": [
+        "libs/vanlife/shared/shared/src/index.ts"
+      ],
+      "@vanlife/vanlife/vans": ["libs/vanlife/vans/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

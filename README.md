@@ -19,3 +19,43 @@ Run `npx nx connect-to-nx-cloud` to enable [remote caching](https://nx.app) and 
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev) to learn more.
+
+## Project Structure
+
+```shell
+## Project Structure
+
+vanlife
+├── apps/
+│ ├── vanlife
+│ └── vanlife-e2e
+│
+└── libs/
+├── vanfile
+│ ├── home
+│ │ ├── pages
+│ │ ├── ui
+│ │ ├── data-access
+│ │ └── utilities
+│ ├── about
+│ │ ├── pages
+│ │ ├── ui
+│ │ ├── data-access
+│ │ └── utilities
+│ ├── vans
+│ │ ├── pages
+│ │ ├── ui
+│ │ ├── data-access
+│ │ └── utilities
+│ ├── host
+│ │ ├── pages
+│ │ ├── ui
+│ │ ├── data-access
+│ │ └── utilities
+│ └── shared
+│ ├── pages
+│ ├── ui
+│ ├── data-access
+│ └── utilities
+└── shared
+```

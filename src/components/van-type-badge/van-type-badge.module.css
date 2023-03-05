@@ -1,0 +1,28 @@
+.van-type-badge-simple,
+.van-type-badge-rugged,
+.van-type-badge-luxury {
+  width: 90px;
+  height: 35px;
+  border-radius: 5px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.van-type-badge-simple {
+  background: #e17654;
+}
+
+.van-type-badge-rugged {
+  background: #115e59;
+}
+
+.van-type-badge-luxury {
+  background: #161616;
+}

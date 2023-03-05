@@ -1,0 +1,14 @@
+.container {
+  padding: 2em;
+  background-color: #fff7ed;
+  height: fit-content;
+}
+
+.vans-page-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 34px;
+  color: #161616;
+}

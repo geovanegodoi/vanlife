@@ -12,7 +12,7 @@ export function Navbar(props: NavbarProps) {
       </Link>
       <div>
         <Link to="/about">About</Link>
-        <a href="/">Vans</a>
+        <a href="/vans">Vans</a>
       </div>
     </div>
   );

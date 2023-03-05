@@ -1,4 +1,4 @@
-import { Footer, Navbar } from '@vanlife/vanlife/shared';
+import { ShellPage } from '@vanlife/vanlife/shared';
 import { AboutComponent } from '../../ui/main';
 import styles from './main.module.css';
 
@@ -7,13 +7,9 @@ export interface MainProps {}
 
 export function Main(props: MainProps) {
   return (
-    <>
-      <Navbar />
-      <div className={styles['container']}>
-        <AboutComponent />
-      </div>
-      <Footer />
-    </>
+    <ShellPage>
+      <AboutComponent />
+    </ShellPage>
   );
 }
 

@@ -9,7 +9,7 @@ export function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/vans" element={<VansPage />} />
-        <Route path="/van-detail" element={<VanDetailPage />} />
+        <Route path="/vans/:id" element={<VanDetailPage />} />
       </Routes>
     </BrowserRouter>
   );

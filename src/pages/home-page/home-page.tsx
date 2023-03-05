@@ -8,7 +8,9 @@ export function HomePage(props: HomePageProps) {
   return (
     <>
       <Navbar />
-      <Home />
+      <div className={styles['container']}>
+        <Home />
+      </div>
       <Footer />
     </>
   );

@@ -3,6 +3,10 @@
   margin: 1em;
 }
 
+.container > a {
+  text-decoration: none;
+}
+
 .card-image {
   width: 230px;
   height: 230px;

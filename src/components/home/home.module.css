@@ -1,16 +1,19 @@
 .container {
   background-image: url('../../assets/home.svg');
-  background-repeat: no-repeat;
+  background-color: #000000;
   height: 385px;
-  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  padding: 0em 2em;
+  padding: 0em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .container > div {
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,6 +39,7 @@
 }
 
 .home-button {
+  z-index: 1;
   border: 0;
   width: 500px;
   height: 50px;

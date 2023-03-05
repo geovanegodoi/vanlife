@@ -4,3 +4,8 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+body {
+  margin-left: 15em;
+  margin-right: 15em;
+}

@@ -20,7 +20,7 @@ const options = [
   },
   {
     text: 'Reviews',
-    target: '',
+    target: '/host/reviews',
   },
 ] as NavbarOption[];
 

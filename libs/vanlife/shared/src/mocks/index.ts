@@ -1,1 +1,2 @@
-export { default as MockData } from './MockData';
+export { default as VansData } from './VansData';
+export { default as ReviewsData } from './ReviewsData';

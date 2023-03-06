@@ -1,6 +1,6 @@
 import { VanType } from '../types';
 
-const MockData = [
+const VansData = [
   {
     id: '1',
     name: 'Modest Explorer',
@@ -63,4 +63,4 @@ const MockData = [
   },
 ];
 
-export default MockData;
+export default VansData;

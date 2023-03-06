@@ -1,6 +1,6 @@
-import { MockData } from '@vanlife/vanlife/shared';
 import { useParams } from 'react-router-dom';
 import { VanDetail, VanDetailProps } from '../../components';
+import { VansData } from '@vanlife/vanlife/shared';
 
 /* eslint-disable-next-line */
 export interface DetailPageProps {}
@@ -8,7 +8,7 @@ export interface DetailPageProps {}
 export function DetailPage(props: DetailPageProps) {
   const { id } = useParams();
   const detailData =
-    MockData.find((item) => item.id === id) || ({} as VanDetailProps);
+    VansData.find((item) => item.id === id) || ({} as VanDetailProps);
 
   return <VanDetail {...detailData} />;
 }

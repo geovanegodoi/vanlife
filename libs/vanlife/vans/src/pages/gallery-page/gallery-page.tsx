@@ -1,6 +1,6 @@
 import styles from './gallery-page.module.css';
 import { VanFilter, VanList } from '../../components';
-import { MockData } from '@vanlife/vanlife/shared';
+import { VansData } from '@vanlife/vanlife/shared';
 
 /* eslint-disable-next-line */
 export interface GalleryPageProps {}
@@ -10,7 +10,7 @@ export function GalleryPage(props: GalleryPageProps) {
     <div style={{ padding: '2em' }}>
       <h1 className={styles['vans-page-title']}>Explore our van options</h1>
       <VanFilter />
-      <VanList items={MockData} />
+      <VanList items={VansData} />
     </div>
   );
 }

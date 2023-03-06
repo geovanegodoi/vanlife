@@ -1,0 +1,14 @@
+.container,
+.value {
+  border-radius: 1em;
+  height: 0.5em;
+}
+
+.container {
+  width: 100%; /* Full width */
+  background-color: #ddd; /* Grey background */
+}
+
+.value {
+  background-color: #ff8c38; /* Grey background */
+}

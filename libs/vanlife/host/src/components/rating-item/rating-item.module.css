@@ -1,0 +1,27 @@
+.container {
+  font-family: 'Inter';
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 0.3em 0em;
+}
+
+.rating-item-title,
+.rating-item-value {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  color: #4d4d4d;
+  display: flex;
+  flex-direction: row;
+  width: 8em;
+}
+
+.rating-item-title {
+  justify-content: start;
+}
+
+.rating-item-value {
+  justify-content: end;
+}

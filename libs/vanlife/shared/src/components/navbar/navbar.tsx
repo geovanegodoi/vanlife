@@ -4,6 +4,7 @@ import styles from './navbar.module.css';
 /* eslint-disable-next-line */
 export interface NavbarProps {
   options: NavbarOption[];
+  defaultOption?: string;
 }
 
 export interface NavbarOption {
@@ -11,8 +12,8 @@ export interface NavbarOption {
   target: string;
 }
 
-export function Navbar({ options }: NavbarProps) {
-  const [current, setCurrent] = useState('');
+export function Navbar({ options, defaultOption }: NavbarProps) {
+  const [current, setCurrent] = useState(defaultOption || '');
 
   function getClassName(item: NavbarOption): string {
     return styles[

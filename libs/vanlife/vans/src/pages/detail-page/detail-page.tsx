@@ -1,5 +1,5 @@
+import { MockData } from '@vanlife/vanlife/shared';
 import { useParams } from 'react-router-dom';
-import { MockData } from '../../mocks/MockData';
 import { VanDetail, VanDetailProps } from '../../components';
 
 /* eslint-disable-next-line */

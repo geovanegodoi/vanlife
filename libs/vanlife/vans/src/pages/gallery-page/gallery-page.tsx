@@ -1,6 +1,6 @@
 import styles from './gallery-page.module.css';
 import { VanFilter, VanList } from '../../components';
-import { MockData } from '../../mocks/MockData';
+import { MockData } from '@vanlife/vanlife/shared';
 
 /* eslint-disable-next-line */
 export interface GalleryPageProps {}

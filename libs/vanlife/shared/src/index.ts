@@ -1,3 +1,4 @@
-export * from './pages/layout-page/layout-page';
-export * from '../../vans/src/mocks/MockData';
+export * from './pages';
+export * from './mocks';
 export * from './components';
+export * from './types';

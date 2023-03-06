@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import ListedVanCard from '../listed-van-card/listed-van-card';
 import styles from './listed-vans.module.css';
-import { MockData } from '../../../../vans/src/mocks/MockData';
+import { MockData } from '@vanlife/vanlife/shared';
 
 /* eslint-disable-next-line */
 export interface ListedVansProps {}

@@ -1,3 +1,3 @@
-export * from './ui/navbar';
-export * from './ui/footer';
-export * from './pages/shell-page';
+export * from './pages/layout-page/layout-page';
+export * from '../../vans/src/mocks/MockData';
+export * from './components';

@@ -1,6 +1,5 @@
 import styles from './gallery-page.module.css';
-import { VanFilter } from '../../ui/van-filter';
-import { VanList } from '../../ui/van-list';
+import { VanFilter, VanList } from '../../components';
 import { MockData } from '../../mocks/MockData';
 
 /* eslint-disable-next-line */

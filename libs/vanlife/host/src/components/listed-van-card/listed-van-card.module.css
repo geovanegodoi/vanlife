@@ -1,0 +1,54 @@
+.container {
+  height: 100px;
+  font-family: 'Inter';
+  font-style: normal;
+  background: #ffffff;
+  border-radius: 10px;
+  margin: 2em 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0em 3em;
+}
+
+.listed-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+}
+
+.listed-card-image {
+  width: 65.88px;
+  height: 65.88px;
+  border-radius: 5px;
+}
+
+.listed-card-name {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  color: #161616;
+}
+
+.listed-card-price {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+
+  color: #4d4d4d;
+}
+
+.container > a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #161616;
+  text-decoration: none;
+}
+
+.container > a:hover {
+  text-decoration: underline;
+}

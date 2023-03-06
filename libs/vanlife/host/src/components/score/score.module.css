@@ -1,0 +1,53 @@
+.container {
+  background: #ffddb3;
+  height: 110px;
+  font-family: 'Inter';
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0em 3em;
+}
+
+.score-container {
+  display: inherit;
+  gap: 2em;
+}
+
+.score-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 22px;
+  color: #161616;
+}
+
+.score-value-container {
+  display: inherit;
+  gap: 0.3em;
+}
+
+.score-value {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+  color: #161616;
+}
+
+.score-value > span {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 22px;
+  color: #4d4d4d;
+}
+
+.container > a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #161616;
+  text-decoration: none;
+}
+
+.container > a:hover {
+  text-decoration: underline;
+}

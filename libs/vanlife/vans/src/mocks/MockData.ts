@@ -1,4 +1,4 @@
-import { VanType } from '../ui/van-type-badge';
+import { VanType } from '../components';
 
 export const MockData = [
   {

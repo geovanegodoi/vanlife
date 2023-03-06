@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { MockData } from '../../mocks/MockData';
-import { VanDetail, VanDetailProps } from '../../ui/van-detail';
+import { VanDetail, VanDetailProps } from '../../components';
 
 /* eslint-disable-next-line */
 export interface DetailPageProps {}

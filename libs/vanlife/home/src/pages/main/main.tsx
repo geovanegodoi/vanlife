@@ -1,4 +1,4 @@
-import { HomeComponent } from '../../ui/main';
+import { HomeComponent } from '../../components/main';
 
 /* eslint-disable-next-line */
 export interface MainProps {}

@@ -1,4 +1,4 @@
-import { AboutComponent } from '../../ui/main';
+import { AboutComponent } from '../../components';
 
 /* eslint-disable-next-line */
 export interface MainProps {}

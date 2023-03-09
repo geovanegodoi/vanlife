@@ -1,9 +1,11 @@
-import RatingItem, { RatingItemProps } from '../rating-item/rating-item';
+import RatingLevelBar, {
+  RatingLevelBarProps,
+} from '../rating-item/rating-item';
 import styles from './rating.module.css';
 import StarImg from '../../assets/star.svg';
 
 /* eslint-disable-next-line */
-export interface RatingProps {}
+export interface OverallRatingProps {}
 
 const ratings = [
   { stars: 5, value: 100 },
@@ -11,9 +13,9 @@ const ratings = [
   { stars: 3, value: 50 },
   { stars: 2, value: 25 },
   { stars: 1, value: 0 },
-] as RatingItemProps[];
+] as RatingLevelBarProps[];
 
-export function Rating(props: RatingProps) {
+export function OverallRating(props: OverallRatingProps) {
   return (
     <div className={styles['container']}>
       <div className={styles['title-container']}>
@@ -22,10 +24,10 @@ export function Rating(props: RatingProps) {
         <p>overall rating</p>
       </div>
       {ratings.map((item) => (
-        <RatingItem {...item} />
+        <RatingLevelBar {...item} />
       ))}
     </div>
   );
 }
 
-export default Rating;
+export default OverallRating;

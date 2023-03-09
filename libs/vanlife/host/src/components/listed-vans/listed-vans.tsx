@@ -1,12 +1,15 @@
 import { Link } from 'react-router-dom';
-import ListedVanCard from '../listed-van-card/listed-van-card';
+import ListedVanCard, {
+  ListedVanCardProps,
+} from '../listed-van-card/listed-van-card';
 import styles from './listed-vans.module.css';
-import { VansData } from '@vanlife/vanlife/shared';
 
 /* eslint-disable-next-line */
-export interface ListedVansProps {}
+export interface ListedVansProps {
+  items: ListedVanCardProps[];
+}
 
-export function ListedVans(props: ListedVansProps) {
+export function ListedVans({ items }: ListedVansProps) {
   return (
     <div className={styles['container']}>
       <div className={styles['list-title-container']}>
@@ -16,8 +19,8 @@ export function ListedVans(props: ListedVansProps) {
         </Link>
       </div>
       <div>
-        {VansData.slice(0, 3).map((item) => (
-          <ListedVanCard key={item.id} {...item} />
+        {items.slice(0, 3).map((item, index) => (
+          <ListedVanCard key={index} {...item} />
         ))}
       </div>
     </div>

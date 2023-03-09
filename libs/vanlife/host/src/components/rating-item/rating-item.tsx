@@ -2,12 +2,12 @@ import RatingBar from '../rating-bar/rating-bar';
 import styles from './rating-item.module.css';
 
 /* eslint-disable-next-line */
-export interface RatingItemProps {
+export interface RatingLevelBarProps {
   stars: number;
   value: number;
 }
 
-export function RatingItem({ stars, value }: RatingItemProps) {
+export function RatingItem({ stars, value }: RatingLevelBarProps) {
   return (
     <div className={styles['container']}>
       <p className={styles['rating-item-title']}>{`${stars} stars`}</p>

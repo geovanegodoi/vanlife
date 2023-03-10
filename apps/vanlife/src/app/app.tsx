@@ -3,9 +3,14 @@ import { AboutPage } from '@vanlife/vanlife/about';
 import { HomePage } from '@vanlife/vanlife/home';
 import {
   HostLayoutPage,
-  HostPage,
+  DashboardPage,
   IncomePage,
   ReviewsPage,
+  VanDetailPage,
+  VansListPage,
+  VanLayoutPage,
+  VanPricingPage,
+  VanPhotosPage,
 } from '@vanlife/vanlife/host';
 import { LayoutPage } from '@vanlife/vanlife/shared';
 import { GalleryPage, DetailPage } from '@vanlife/vanlife/vans';
@@ -15,15 +20,21 @@ export function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<LayoutPage />}>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/vans" element={<GalleryPage />} />
-          <Route path="/vans/:id" element={<DetailPage />} />
-          <Route element={<HostLayoutPage />}>
-            <Route path="/host" element={<HostPage />} />
-            <Route path="/host/income" element={<IncomePage />} />
-            <Route path="/host/reviews" element={<ReviewsPage />} />
+        <Route path="/" element={<LayoutPage />}>
+          <Route index element={<HomePage />} />
+          <Route path="about" element={<AboutPage />} />
+          <Route path="vans" element={<GalleryPage />} />
+          <Route path="vans/:id" element={<DetailPage />} />
+          <Route path="host" element={<HostLayoutPage />}>
+            <Route index element={<DashboardPage />} />
+            <Route path="income" element={<IncomePage />} />
+            <Route path="vans" element={<VansListPage />} />
+            <Route path="vans/:id" element={<VanLayoutPage />}>
+              <Route index element={<VanDetailPage />} />
+              <Route path="pricing" element={<VanPricingPage />} />
+              <Route path="photos" element={<VanPhotosPage />} />
+            </Route>
+            <Route path="reviews" element={<ReviewsPage />} />
           </Route>
         </Route>
       </Routes>

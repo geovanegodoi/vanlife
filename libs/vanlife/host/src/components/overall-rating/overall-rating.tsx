@@ -1,7 +1,7 @@
 import RatingLevelBar, {
   RatingLevelBarProps,
 } from '../rating-item/rating-item';
-import styles from './rating.module.css';
+import styles from './overall-rating.module.css';
 import StarImg from '../../assets/star.svg';
 
 /* eslint-disable-next-line */
@@ -23,8 +23,8 @@ export function OverallRating(props: OverallRatingProps) {
         <img src={StarImg} alt="rating" />
         <p>overall rating</p>
       </div>
-      {ratings.map((item) => (
-        <RatingLevelBar {...item} />
+      {ratings.map((item, index) => (
+        <RatingLevelBar key={index} {...item} />
       ))}
     </div>
   );

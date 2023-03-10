@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styles from './navbar.module.css';
+
 /* eslint-disable-next-line */
 export interface NavbarProps {
   options: NavbarOption[];
@@ -10,28 +10,23 @@ export interface NavbarProps {
 export interface NavbarOption {
   text: string;
   target: string;
+  end?: boolean;
 }
 
 export function Navbar({ options, defaultOption }: NavbarProps) {
-  const [current, setCurrent] = useState(defaultOption || '');
-
-  function getClassName(item: NavbarOption): string {
-    return styles[
-      current === item.text ? 'navbar-link-current' : 'navbar-link'
-    ];
-  }
-
   return (
     <div className={styles['container']}>
       {options.map((item) => (
-        <Link
+        <NavLink
           key={item.text}
           to={item.target}
-          onClick={() => setCurrent(item.text)}
-          className={getClassName(item)}
+          className={({ isActive }) =>
+            styles[isActive ? 'navbar-link-current' : 'navbar-link']
+          }
+          end={item.end}
         >
           {item.text}
-        </Link>
+        </NavLink>
       ))}
     </div>
   );

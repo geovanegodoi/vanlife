@@ -1,15 +1,8 @@
-.container {
-  height: 220px;
-  font-family: 'Inter';
-  font-style: normal;
-  height: fit-content;
-}
-
 .list-title-container {
   display: flex;
-  padding: 3em 3em 1em 2em;
   align-items: center;
   justify-content: space-between;
+  padding: 3em 3em 0em;
 }
 
 .list-title {

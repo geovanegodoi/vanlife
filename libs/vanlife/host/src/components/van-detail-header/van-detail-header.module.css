@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  gap: 1em;
+}
+
+.van-detail-header-image {
+  width: 160.15px;
+  height: 157.9px;
+  border-radius: 5px;
+}
+
+.van-detail-data-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+}
+
+.van-detail-header-name {
+  font-weight: 700;
+  font-size: 26.0583px;
+  line-height: 27px;
+  color: #161616;
+}
+
+.van-detail-header-price {
+  font-weight: 300;
+  font-size: 18px;
+  color: #161616;
+}
+
+.van-detail-header-price > span {
+  font-weight: 700;
+  font-size: 19.5437px;
+  line-height: 36px;
+}

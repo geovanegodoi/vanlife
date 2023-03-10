@@ -1,0 +1,21 @@
+.container {
+  padding: 1em 3em;
+}
+
+.container > a {
+  font-weight: 500;
+  font-size: 15px;
+  text-decoration-line: underline;
+  color: #201f1d;
+}
+
+.van-detail-container {
+  margin-top: 3em;
+  height: fit-content;
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}

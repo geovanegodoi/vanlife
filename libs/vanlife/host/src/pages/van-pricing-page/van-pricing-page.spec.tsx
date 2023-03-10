@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import ListedVans from './listed-vans';
+import VanPricingPage from './van-pricing-page';
 
-describe('ListedVans', () => {
+describe('VanPricingPage', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<ListedVans />);
+    const { baseElement } = render(<VanPricingPage />);
     expect(baseElement).toBeTruthy();
   });
 });

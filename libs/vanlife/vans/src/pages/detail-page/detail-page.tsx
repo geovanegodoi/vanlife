@@ -7,10 +7,9 @@ export interface DetailPageProps {}
 
 export function DetailPage(props: DetailPageProps) {
   const { id } = useParams();
-  const detailData =
-    VansData.find((item) => item.id === id) || ({} as VanDetailProps);
+  const data = VansData.find((item) => item.id === id);
 
-  return <VanDetail {...detailData} />;
+  return <VanDetail {...(data || ({} as VanDetailProps))} />;
 }
 
 export default DetailPage;

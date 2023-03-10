@@ -1,5 +1,6 @@
+import { VanType } from '@vanlife/vanlife/shared';
 import { Link } from 'react-router-dom';
-import { VanType, VanTypeBadge } from '../../components';
+import { VanTypeBadge } from '../../components';
 import styles from './van-card.module.css';
 
 /* eslint-disable-next-line */

@@ -10,6 +10,7 @@ const VansData = [
     imageUrl:
       'https://assets.scrimba.com/advanced-react/react-router/modest-explorer.png',
     type: 'Simple' as VanType,
+    visibility: 'Public',
   },
   {
     id: '2',
@@ -20,6 +21,7 @@ const VansData = [
     imageUrl:
       'https://assets.scrimba.com/advanced-react/react-router/beach-bum.png',
     type: 'Rugged' as VanType,
+    visibility: 'Public',
   },
   {
     id: '3',
@@ -30,6 +32,7 @@ const VansData = [
     imageUrl:
       'https://assets.scrimba.com/advanced-react/react-router/reliable-red.png',
     type: 'Luxury' as VanType,
+    visibility: 'Public',
   },
   {
     id: '4',
@@ -40,6 +43,7 @@ const VansData = [
     imageUrl:
       'https://assets.scrimba.com/advanced-react/react-router/dreamfinder.png',
     type: 'Simple' as VanType,
+    visibility: 'Public',
   },
   {
     id: '5',
@@ -50,6 +54,7 @@ const VansData = [
     imageUrl:
       'https://assets.scrimba.com/advanced-react/react-router/the-cruiser.png',
     type: 'Luxury' as VanType,
+    visibility: 'Public',
   },
   {
     id: '6',
@@ -60,6 +65,7 @@ const VansData = [
     imageUrl:
       'https://assets.scrimba.com/advanced-react/react-router/green-wonder.png',
     type: 'Rugged' as VanType,
+    visibility: 'Public',
   },
 ];
 

@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import ListedVanCard from './listed-van-card';
+import HostPage from './dashboard-page';
 
-describe('ListedVanCard', () => {
+describe('HostPage', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<ListedVanCard />);
+    const { baseElement } = render(<HostPage />);
     expect(baseElement).toBeTruthy();
   });
 });

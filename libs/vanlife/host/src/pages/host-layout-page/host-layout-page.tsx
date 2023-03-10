@@ -9,14 +9,15 @@ const options = [
   {
     text: 'Dashboard',
     target: '/host',
+    end: true,
   },
-  {
-    text: 'Income',
-    target: '/host/income',
-  },
+  // {
+  //   text: 'Income',
+  //   target: '/host/income',
+  // },
   {
     text: 'Vans',
-    target: '',
+    target: '/host/vans',
   },
   {
     text: 'Reviews',

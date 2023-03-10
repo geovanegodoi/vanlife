@@ -9,8 +9,8 @@ export interface RatingStarsProps {
 export function RatingStars({ rating }: RatingStarsProps) {
   return (
     <div className={styles['container']}>
-      {[...Array(rating)].map(() => (
-        <img src={Star} alt="star" />
+      {[...Array(rating)].map((item, index) => (
+        <img key={index} src={Star} alt="star" />
       ))}
     </div>
   );

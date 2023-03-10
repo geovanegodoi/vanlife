@@ -1,14 +1,20 @@
-import styles from './listed-van-card.module.css';
+import styles from './host-list-van-card.module.css';
 import { Link } from 'react-router-dom';
 
 /* eslint-disable-next-line */
-export interface ListedVanCardProps {
+export interface HostListVanCardProps {
+  id: string;
   imageUrl: string;
   name: string;
   price: number;
 }
 
-export function ListedVanCard({ imageUrl, name, price }: ListedVanCardProps) {
+export function HostListVanCard({
+  id,
+  imageUrl,
+  name,
+  price,
+}: HostListVanCardProps) {
   return (
     <div className={styles['container']}>
       <div className={styles['listed-card']}>
@@ -22,9 +28,9 @@ export function ListedVanCard({ imageUrl, name, price }: ListedVanCardProps) {
           <p className={styles['listed-card-price']}>${price}/day</p>
         </div>
       </div>
-      <Link to="">Details</Link>
+      <Link to={`/host/vans/${id}`}>Details</Link>
     </div>
   );
 }
 
-export default ListedVanCard;
+export default HostListVanCard;

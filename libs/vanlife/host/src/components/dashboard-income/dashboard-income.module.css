@@ -1,8 +1,6 @@
 .container {
   background-color: #ffead0;
   height: 220px;
-  font-family: 'Inter';
-  font-style: normal;
   display: flex;
   align-items: center;
   justify-content: space-between;

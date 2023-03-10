@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import HostPage from './host-page';
+import VanDetailPage from './van-detail-page';
 
-describe('HostPage', () => {
+describe('VanDetailPage', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<HostPage />);
+    const { baseElement } = render(<VanDetailPage />);
     expect(baseElement).toBeTruthy();
   });
 });

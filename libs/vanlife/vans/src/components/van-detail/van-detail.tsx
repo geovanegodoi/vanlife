@@ -1,8 +1,7 @@
 import styles from './van-detail.module.css';
 import GoBackImg from '../../assets/goback.svg';
 import { Link } from 'react-router-dom';
-import { VanTypeBadge } from '../../components';
-import { VanType } from '@vanlife/vanlife/shared';
+import { VanType, VanTypeBadge } from '@vanlife/vanlife/shared';
 
 /* eslint-disable-next-line */
 export interface VanDetailProps {

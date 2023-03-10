@@ -1,5 +1,5 @@
 import styles from './van-layout-page.module.css';
-import GoBackImg from '../../assets/goback.svg';
+import ReturnImg from '../../assets/goback.svg';
 import { Link, Outlet, useParams } from 'react-router-dom';
 import { Navbar, NavbarOption } from '@vanlife/vanlife/shared';
 import { VanDetailHeader, VanDetailHeaderProps } from '../../components';
@@ -30,21 +30,21 @@ export function VanLayoutPage(props: VanLayoutPageProps) {
 
   return (
     <div className={styles['container']}>
-      <GoBackLink />
+      <ReturnLink />
       <div className={styles['van-detail-container']}>
         <VanDetailHeader {...(data as VanDetailHeaderProps)} />
         <Navbar options={options} />
-        <Outlet />
+        <Outlet context={data} />
       </div>
     </div>
   );
 }
 
-function GoBackLink() {
+function ReturnLink() {
   return (
-    <Link to="/host/vans">
-      <img src={GoBackImg} alt="Goback" style={{ marginRight: '0.5em' }} /> Back
-      to all vans
+    <Link to="../vans">
+      <img src={ReturnImg} alt="Go back" style={{ marginRight: '0.5em' }} />{' '}
+      Back to all vans
     </Link>
   );
 }

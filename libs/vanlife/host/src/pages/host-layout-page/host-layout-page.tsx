@@ -11,17 +11,17 @@ const options = [
     target: '/host',
     end: true,
   },
-  // {
-  //   text: 'Income',
-  //   target: '/host/income',
-  // },
+  {
+    text: 'Income',
+    target: 'income',
+  },
   {
     text: 'Vans',
-    target: '/host/vans',
+    target: 'vans',
   },
   {
     text: 'Reviews',
-    target: '/host/reviews',
+    target: 'reviews',
   },
 ] as NavbarOption[];
 

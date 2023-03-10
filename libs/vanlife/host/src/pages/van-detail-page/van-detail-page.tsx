@@ -1,28 +1,27 @@
 import { VansData, VanType } from '@vanlife/vanlife/shared';
-import { useParams } from 'react-router-dom';
+import { useOutletContext, useParams } from 'react-router-dom';
 import { DetailLabel } from '../../components';
 import styles from './van-detail-page.module.css';
 
 /* eslint-disable-next-line */
-export interface VanDetailPageProps {
-  // name: string;
-  // type: VanType;
-  // description: string;
-  // visibility: string;
+export interface VanDetailPageProps {}
+
+interface VanDetailPageData {
+  name: string;
+  type: VanType;
+  description: string;
+  visibility: string;
 }
 
 export function VanDetailPage(props: VanDetailPageProps) {
-  const { id } = useParams();
-  const { name, type, description, visibility } = VansData.find(
-    (item) => item.id === id
-  );
+  const context = useOutletContext<VanDetailPageData>();
 
   return (
     <div className={styles['container']}>
-      <DetailLabel label="Name" value={name} />
-      <DetailLabel label="Category" value={type} />
-      <DetailLabel label="Description" value={description} />
-      <DetailLabel label="Visibility" value={visibility} />
+      <DetailLabel label="Name" value={context.name} />
+      <DetailLabel label="Category" value={context.type} />
+      <DetailLabel label="Description" value={context.description} />
+      <DetailLabel label="Visibility" value={context.visibility} />
     </div>
   );
 }

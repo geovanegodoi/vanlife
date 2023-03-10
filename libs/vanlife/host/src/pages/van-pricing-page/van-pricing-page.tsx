@@ -1,16 +1,19 @@
 import { VansData } from '@vanlife/vanlife/shared';
-import { useParams } from 'react-router-dom';
+import { useOutletContext, useParams } from 'react-router-dom';
 import styles from './van-pricing-page.module.css';
 
 /* eslint-disable-next-line */
 export interface VanPricingPageProps {}
 
+interface VanPricingPageData {
+  price: string;
+}
+
 export function VanPricingPage(props: VanPricingPageProps) {
-  const { id } = useParams();
-  const { price } = VansData.find((item) => item.id === id);
+  const context = useOutletContext<VanPricingPageData>();
   return (
     <p className={styles['van-pricing-label']}>
-      <span>${price}</span>/day
+      <span>${context.price}</span>/day
     </p>
   );
 }

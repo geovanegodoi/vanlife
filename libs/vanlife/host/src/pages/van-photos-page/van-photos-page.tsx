@@ -1,16 +1,24 @@
 import { VansData } from '@vanlife/vanlife/shared';
-import { useParams } from 'react-router-dom';
+import { useOutletContext, useParams } from 'react-router-dom';
 import styles from './van-photos-page.module.css';
 
 /* eslint-disable-next-line */
 export interface VanPhotosPageProps {}
 
+interface VanPhotosPageData {
+  imageUrl: string;
+  name: string;
+}
+
 export function VanPhotosPage(props: VanPhotosPageProps) {
-  const { id } = useParams();
-  const { imageUrl, name } = VansData.find((item) => item.id === id);
+  const context = useOutletContext<VanPhotosPageData>();
   return (
     <div className={styles['container']}>
-      <img className={styles['van-photo-image']} src={imageUrl} alt={name} />
+      <img
+        className={styles['van-photo-image']}
+        src={context.imageUrl}
+        alt={context.name}
+      />
     </div>
   );
 }

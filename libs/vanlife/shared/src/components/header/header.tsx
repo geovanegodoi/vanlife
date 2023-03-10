@@ -6,9 +6,9 @@ import { Navbar, NavbarOption } from '../index';
 export interface HeaderProps {}
 
 const navbarOptions = [
-  { text: 'Host', target: '/host' },
-  { text: 'About', target: '/about' },
-  { text: 'Vans', target: '/vans' },
+  { text: 'Host', target: 'host' },
+  { text: 'About', target: 'about' },
+  { text: 'Vans', target: 'vans' },
 ] as NavbarOption[];
 
 export function Header(props: HeaderProps) {

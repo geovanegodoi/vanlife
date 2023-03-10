@@ -1,5 +1,5 @@
-import { VanType } from '@vanlife/vanlife/shared';
 import styles from './van-type-badge.module.css';
+import { VanType } from '../../types';
 
 /* eslint-disable-next-line */
 export interface VanTypeBadgeProps {

@@ -1,5 +1,4 @@
-import { VanType } from '@vanlife/vanlife/shared';
-import { VanTypeBadge } from 'libs/vanlife/vans/src/components';
+import { VanType, VanTypeBadge } from '@vanlife/vanlife/shared';
 import styles from './van-detail-header.module.css';
 
 /* eslint-disable-next-line */

@@ -7,6 +7,7 @@ export default function useVansFilter() {
   const filteredItems = filterType
     ? VansData.filter((item) => item.type === filterType)
     : VansData;
+  const queryString = searchParams.toString() && `?${searchParams.toString()}`;
 
   function setFilterParams(value: string) {
     setSearchParams((prev) => {
@@ -19,5 +20,10 @@ export default function useVansFilter() {
     });
   }
 
-  return { filterType, filteredItems, setFilterParams };
+  return {
+    filterType,
+    filteredItems,
+    queryString,
+    setFilterParams,
+  };
 }

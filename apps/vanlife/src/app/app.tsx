@@ -12,7 +12,7 @@ import {
   VanPricingPage,
   VanPhotosPage,
 } from '@vanlife/vanlife/host';
-import { LayoutPage } from '@vanlife/vanlife/shared';
+import { LayoutPage, NotFoundPage } from '@vanlife/vanlife/shared';
 import { GalleryPage, DetailPage } from '@vanlife/vanlife/vans';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
@@ -21,6 +21,7 @@ export function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LayoutPage />}>
+          <Route path="*" element={<NotFoundPage />} />
           <Route index element={<HomePage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="vans" element={<GalleryPage />} />

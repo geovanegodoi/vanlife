@@ -7,7 +7,6 @@ export interface GalleryPageProps {}
 
 export function GalleryPage(props: GalleryPageProps) {
   const { filteredItems } = useVansFilter();
-
   return (
     <div style={{ padding: '2em' }}>
       <h1 className={styles['vans-page-title']}>Explore our van options</h1>

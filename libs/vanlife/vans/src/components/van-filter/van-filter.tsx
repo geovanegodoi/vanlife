@@ -15,7 +15,10 @@ export function VanFilter(props: VanFilterProps) {
       {types.map((item) => (
         <Link
           key={item}
-          className={styles['van-filter-button']}
+          className={`${styles['van-filter-button']} 
+                      ${styles[item.toLowerCase()]}
+                      ${filterType === item ? styles['selected'] : ''}
+                      `}
           to={`?type=${item}`}
         >
           {item}

@@ -1,6 +1,7 @@
 import styles from './van-card.module.css';
 import { Link } from 'react-router-dom';
 import { VanType, VanTypeBadge } from '@vanlife/vanlife/shared';
+import useVansFilter from '../../hooks/useVansFilter';
 
 /* eslint-disable-next-line */
 export interface VanCardProps {
@@ -12,9 +13,15 @@ export interface VanCardProps {
 }
 
 export function VanCard({ id, name, price, imageUrl, type }: VanCardProps) {
+  //TODO: REMOVER
+  const { queryString, filterType } = useVansFilter();
+
   return (
     <div className={styles['container']}>
-      <Link to={`${id}`}>
+      <Link
+        to={`${id}`}
+        state={queryString && { search: queryString, filterType: filterType }}
+      >
         <img className={styles['card-image']} src={imageUrl} alt={name} />
         <div className={styles['card-summary']}>
           <label className={styles['card-van-name']}>{name}</label>

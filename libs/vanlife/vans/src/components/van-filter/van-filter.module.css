@@ -2,8 +2,9 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
-  padding: 2em 0em;
+  justify-content: start;
+  gap: 5em;
+  padding: 2em 1em;
 }
 
 .van-filter-button {
@@ -22,17 +23,20 @@
   justify-content: center;
 }
 
-.van-filter-button:nth-child(1):hover {
+.van-filter-button.simple:hover,
+.van-filter-button.simple.selected {
   background: #e17654;
   color: #fff;
 }
 
-.van-filter-button:nth-child(2):hover {
+.van-filter-button.luxury:hover,
+.van-filter-button.luxury.selected {
   background: #161616;
   color: #fff;
 }
 
-.van-filter-button:nth-child(3):hover {
+.van-filter-button.rugged:hover,
+.van-filter-button.rugged.selected {
   background: #115e59;
   color: #fff;
 }

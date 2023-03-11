@@ -1,0 +1,38 @@
+/*
+ * Replace this with your own classes
+ *
+ * e.g.
+ * .container {
+ * }
+*/
+.container {
+  padding: 5em 10em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.container > h1 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 42px;
+  color: #161616;
+}
+
+.container > a {
+  width: 500px;
+  height: 55px;
+  background: #161616;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  color: #ffffff;
+}

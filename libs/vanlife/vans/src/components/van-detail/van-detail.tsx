@@ -21,7 +21,7 @@ export function VanDetail({
 }: VanDetailProps) {
   return (
     <div className={styles['container']}>
-      <Link to="/vans">
+      <Link to="../vans">
         <img src={GoBackImg} alt="Goback" style={{ marginRight: '0.5em' }} />{' '}
         Back to all vans
       </Link>

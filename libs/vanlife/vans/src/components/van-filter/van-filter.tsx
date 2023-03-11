@@ -1,20 +1,36 @@
+import { VanType } from '@vanlife/vanlife/shared';
+import { Link } from 'react-router-dom';
+import useVansFilter from '../../hooks/useVansFilter';
 import styles from './van-filter.module.css';
 
 /* eslint-disable-next-line */
 export interface VanFilterProps {}
 
 export function VanFilter(props: VanFilterProps) {
-  const types = ['Simple', 'Luxury', 'Rugged'];
+  const types = ['Simple', 'Luxury', 'Rugged'] as VanType[];
+  const { filterType } = useVansFilter();
 
   return (
     <div className={styles['container']}>
       {types.map((item) => (
-        <button key={item} className={styles['van-filter-button']}>
+        <Link
+          key={item}
+          className={styles['van-filter-button']}
+          to={`?type=${item}`}
+        >
           {item}
-        </button>
+        </Link>
       ))}
-      <a className={styles['van-filter-clear']}>Clear filter</a>
+      {filterType && <CleanFilterLink />}
     </div>
+  );
+}
+
+function CleanFilterLink() {
+  return (
+    <Link className={styles['van-filter-clear']} to=".">
+      Clear filter
+    </Link>
   );
 }
 

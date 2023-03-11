@@ -3,7 +3,7 @@ import styles from './navbar.module.css';
 
 /* eslint-disable-next-line */
 export interface NavbarProps {
-  options: NavbarOption[];
+  options: NavbarOptions;
   defaultOption?: string;
 }
 
@@ -12,6 +12,8 @@ export interface NavbarOption {
   target: string;
   end?: boolean;
 }
+
+export type NavbarOptions = NavbarOption[];
 
 export function Navbar({ options, defaultOption }: NavbarProps) {
   return (

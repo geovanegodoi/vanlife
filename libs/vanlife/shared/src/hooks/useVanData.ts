@@ -3,16 +3,20 @@ import { useEffect, useState } from 'react';
 
 export function useVanData(id: string | undefined) {
   const [data, setData] = useState<VanModel>();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (id) {
       fetch(`/api/vans/${id}`)
         .then((res) => res.json())
-        .then((json) => setData(json.van));
+        .then((json) => {
+          setLoading(false);
+          setData(json.van);
+        });
     }
   }, [id]);
 
-  return [data];
+  return { loading, data };
 }
 
 export default useVanData;

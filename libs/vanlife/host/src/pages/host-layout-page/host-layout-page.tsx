@@ -1,4 +1,4 @@
-import { Navbar, NavbarOption } from '@vanlife/vanlife/shared';
+import { Navbar, NavbarOptions } from '@vanlife/vanlife/shared';
 import { Outlet } from 'react-router-dom';
 import styles from './host-layout-page.module.css';
 
@@ -23,7 +23,7 @@ const options = [
     text: 'Reviews',
     target: 'reviews',
   },
-] as NavbarOption[];
+] as NavbarOptions;
 
 export function HostLayoutPage(props: HostLayoutPageProps) {
   return (

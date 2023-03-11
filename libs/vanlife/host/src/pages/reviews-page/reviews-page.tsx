@@ -1,25 +1,19 @@
 import { ReviewTitle, OverallRating } from '../../components';
 import ReviewsList from '../../components/reviews-list/reviews-list';
 import styles from './reviews-page.module.css';
-import { ReviewModel } from '@vanlife/vanlife/shared';
-import { useEffect, useState } from 'react';
+import { useReviewsData } from '@vanlife/vanlife/shared';
 
 /* eslint-disable-next-line */
 export interface ReviewsPageProps {}
 
 export function ReviewsPage(props: ReviewsPageProps) {
-  const [reviews, setReviews] = useState<ReviewModel[]>([]);
-  useEffect(() => {
-    fetch('/api/reviews')
-      .then((res) => res.json())
-      .then((json) => setReviews(json.reviews));
-  }, []);
+  const { loading, reviews } = useReviewsData();
 
   return (
     <div className={styles['container']}>
       <ReviewTitle />
       <OverallRating />
-      <ReviewsList reviews={reviews} />
+      <ReviewsList reviews={reviews} isLoading={loading} />
     </div>
   );
 }

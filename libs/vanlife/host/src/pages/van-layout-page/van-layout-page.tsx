@@ -1,7 +1,12 @@
 import styles from './van-layout-page.module.css';
 import ReturnImg from '../../assets/goback.svg';
 import { Link, Outlet, useParams } from 'react-router-dom';
-import { Navbar, NavbarOption, useVanData } from '@vanlife/vanlife/shared';
+import {
+  Loading,
+  Navbar,
+  NavbarOptions,
+  useVanData,
+} from '@vanlife/vanlife/shared';
 import { VanDetailHeader, VanDetailHeaderProps } from '../../components';
 
 /* eslint-disable-next-line */
@@ -21,19 +26,21 @@ const options = [
     text: 'Photos',
     target: 'photos',
   },
-] as NavbarOption[];
+] as NavbarOptions;
 
 export function VanLayoutPage(props: VanLayoutPageProps) {
   const { id } = useParams();
-  const [data] = useVanData(id);
+  const { loading, data } = useVanData(id);
 
   return (
     <div className={styles['container']}>
       <ReturnLink />
       <div className={styles['van-detail-container']}>
-        <VanDetailHeader {...(data as VanDetailHeaderProps)} />
-        <Navbar options={options} />
-        <Outlet context={data} />
+        <Loading isLoading={loading}>
+          <VanDetailHeader {...(data as VanDetailHeaderProps)} />
+          <Navbar options={options} />
+          <Outlet context={data} />
+        </Loading>
       </div>
     </div>
   );

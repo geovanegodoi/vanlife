@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styles from './header.module.css';
-import { Navbar, NavbarOption } from '../index';
+import { Navbar, NavbarOptions } from '../index';
 
 /* eslint-disable-next-line */
 export interface HeaderProps {}
@@ -9,7 +9,7 @@ const navbarOptions = [
   { text: 'Host', target: 'host' },
   { text: 'About', target: 'about' },
   { text: 'Vans', target: 'vans' },
-] as NavbarOption[];
+] as NavbarOptions;
 
 export function Header(props: HeaderProps) {
   return (

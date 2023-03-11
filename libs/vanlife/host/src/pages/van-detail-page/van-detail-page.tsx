@@ -1,5 +1,5 @@
-import { VansData, VanType } from '@vanlife/vanlife/shared';
-import { useOutletContext, useParams } from 'react-router-dom';
+import { VanType } from '@vanlife/vanlife/shared';
+import { useOutletContext } from 'react-router-dom';
 import { DetailLabel } from '../../components';
 import styles from './van-detail-page.module.css';
 

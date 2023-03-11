@@ -1,6 +1,6 @@
 import { VanType } from '../types';
 
-const VansData = [
+export default [
   {
     id: '1',
     name: 'Modest Explorer',
@@ -68,5 +68,3 @@ const VansData = [
     visibility: 'Public',
   },
 ];
-
-export default VansData;

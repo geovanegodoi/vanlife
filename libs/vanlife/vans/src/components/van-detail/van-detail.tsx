@@ -2,7 +2,6 @@ import styles from './van-detail.module.css';
 import GoBackImg from '../../assets/goback.svg';
 import { Link, useLocation } from 'react-router-dom';
 import { VanType, VanTypeBadge } from '@vanlife/vanlife/shared';
-import useVansFilter from '../../hooks/useVansFilter';
 
 /* eslint-disable-next-line */
 export interface VanDetailProps {
@@ -23,6 +22,8 @@ export function VanDetail({
   const location = useLocation();
   const searchParams = location.state?.search || '';
   const filterType = location.state?.filterType || 'all';
+
+  console.log(location);
 
   return (
     <div className={styles['container']}>

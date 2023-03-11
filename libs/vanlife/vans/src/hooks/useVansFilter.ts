@@ -1,12 +1,8 @@
-import { VansData } from '@vanlife/vanlife/shared';
 import { useSearchParams } from 'react-router-dom';
 
-export default function useVansFilter() {
+export function useVansFilter() {
   const [searchParams, setSearchParams] = useSearchParams();
   const filterType = searchParams.get('type');
-  const filteredItems = filterType
-    ? VansData.filter((item) => item.type === filterType)
-    : VansData;
   const queryString = searchParams.toString() && `?${searchParams.toString()}`;
 
   function setFilterParams(value: string) {
@@ -20,10 +16,7 @@ export default function useVansFilter() {
     });
   }
 
-  return {
-    filterType,
-    filteredItems,
-    queryString,
-    setFilterParams,
-  };
+  return { filterType, queryString, setFilterParams };
 }
+
+export default useVansFilter;

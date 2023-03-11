@@ -12,11 +12,12 @@ import {
   VanPricingPage,
   VanPhotosPage,
 } from '@vanlife/vanlife/host';
-import { LayoutPage, NotFoundPage } from '@vanlife/vanlife/shared';
+import { LayoutPage, MockAPI, NotFoundPage } from '@vanlife/vanlife/shared';
 import { GalleryPage, DetailPage } from '@vanlife/vanlife/vans';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 export function App() {
+  MockAPI();
   return (
     <BrowserRouter>
       <Routes>

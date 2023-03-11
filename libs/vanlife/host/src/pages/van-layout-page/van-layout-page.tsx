@@ -1,9 +1,8 @@
 import styles from './van-layout-page.module.css';
 import ReturnImg from '../../assets/goback.svg';
 import { Link, Outlet, useParams } from 'react-router-dom';
-import { Navbar, NavbarOption } from '@vanlife/vanlife/shared';
+import { Navbar, NavbarOption, useVanData } from '@vanlife/vanlife/shared';
 import { VanDetailHeader, VanDetailHeaderProps } from '../../components';
-import { VansData } from '@vanlife/vanlife/shared';
 
 /* eslint-disable-next-line */
 export interface VanLayoutPageProps {}
@@ -26,7 +25,7 @@ const options = [
 
 export function VanLayoutPage(props: VanLayoutPageProps) {
   const { id } = useParams();
-  const data = VansData.find((item) => item.id === id);
+  const [data] = useVanData(id);
 
   return (
     <div className={styles['container']}>

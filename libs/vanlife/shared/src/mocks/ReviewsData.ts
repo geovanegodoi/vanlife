@@ -1,4 +1,4 @@
-const ReviewsData = [
+export default [
   {
     rating: 4,
     user: 'Elliot',
@@ -12,5 +12,3 @@ const ReviewsData = [
     text: 'This is our third time using the Modest Explorer for our travels and we love it! No complaints, absolutely perfect!',
   },
 ];
-
-export default ReviewsData;

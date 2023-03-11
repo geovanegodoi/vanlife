@@ -1,18 +1,19 @@
 import { DashboardIncome, HostListVans, Score } from '../../components';
 import styles from './dashboard-page.module.css';
-import { VansData } from '@vanlife/vanlife/shared';
 import { Link } from 'react-router-dom';
+import { useVansData } from '@vanlife/vanlife/shared';
 
 /* eslint-disable-next-line */
 export interface DashboardPageProps {}
 
 export function DashboardPage(props: DashboardPageProps) {
+  const [vans] = useVansData();
   return (
     <div className={styles['container']}>
       <DashboardIncome />
       <Score />
       <HostListVansTitle />
-      <HostListVans items={VansData.slice(0, 3)} />
+      <HostListVans items={vans?.slice(0, 3) || []} />
     </div>
   );
 }

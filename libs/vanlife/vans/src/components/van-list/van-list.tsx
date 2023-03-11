@@ -1,6 +1,5 @@
 import styles from './van-list.module.css';
 import { VanCard, VanCardProps } from '../../components';
-import useVansFilter from '../../hooks/useVansFilter';
 
 /* eslint-disable-next-line */
 export interface VanListProps {

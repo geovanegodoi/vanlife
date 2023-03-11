@@ -1,7 +1,7 @@
 import styles from './van-card.module.css';
 import { Link } from 'react-router-dom';
 import { VanType, VanTypeBadge } from '@vanlife/vanlife/shared';
-import useVansFilter from '../../hooks/useVansFilter';
+import { useVansFilter } from '../../hooks';
 
 /* eslint-disable-next-line */
 export interface VanCardProps {

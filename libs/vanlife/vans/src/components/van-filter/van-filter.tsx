@@ -1,6 +1,6 @@
 import { VanType } from '@vanlife/vanlife/shared';
 import { Link } from 'react-router-dom';
-import useVansFilter from '../../hooks/useVansFilter';
+import { useVansFilter } from '../../hooks';
 import styles from './van-filter.module.css';
 
 /* eslint-disable-next-line */

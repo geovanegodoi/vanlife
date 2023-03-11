@@ -1,15 +1,31 @@
+import { useVanData } from '@vanlife/vanlife/shared';
 import { useParams } from 'react-router-dom';
 import { VanDetail, VanDetailProps } from '../../components';
-import { VansData } from '@vanlife/vanlife/shared';
 
 /* eslint-disable-next-line */
 export interface DetailPageProps {}
 
 export function DetailPage(props: DetailPageProps) {
   const { id } = useParams();
-  const data = VansData.find((item) => item.id === id);
+  const [van] = useVanData(id);
 
-  return <VanDetail {...(data || ({} as VanDetailProps))} />;
+  function dataNotReady() {
+    return !van;
+  }
+
+  function Loading() {
+    return (
+      <div style={{ padding: '2em 3em' }}>
+        <h1>Loading...</h1>
+      </div>
+    );
+  }
+
+  if (dataNotReady()) {
+    return <Loading />;
+  }
+
+  return <VanDetail {...(van as VanDetailProps)} />;
 }
 
 export default DetailPage;

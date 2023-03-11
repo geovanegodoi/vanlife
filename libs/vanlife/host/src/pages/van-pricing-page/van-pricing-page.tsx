@@ -1,5 +1,4 @@
-import { VansData } from '@vanlife/vanlife/shared';
-import { useOutletContext, useParams } from 'react-router-dom';
+import { useOutletContext } from 'react-router-dom';
 import styles from './van-pricing-page.module.css';
 
 /* eslint-disable-next-line */

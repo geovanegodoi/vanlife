@@ -1,0 +1,9 @@
+.container {
+  padding: 3em;
+  margin-right: 6em;
+  overflow: hidden;
+}
+
+.container > h1 {
+  color: red;
+}

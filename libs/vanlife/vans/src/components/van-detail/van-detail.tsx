@@ -19,11 +19,12 @@ export function VanDetail({
   price,
   description,
 }: VanDetailProps) {
-  const location = useLocation();
-  const searchParams = location.state?.search || '';
-  const filterType = location.state?.filterType || 'all';
+  const state = useLocation().state;
+  const searchParams = state ? state.search : '';
+  const filterType = state ? state.filterType : 'all';
 
-  console.log(location);
+  console.log({ searchParams });
+  console.log({ filterType });
 
   return (
     <div className={styles['container']}>

@@ -3,7 +3,7 @@ import { ReviewModel, VanModel } from '../types';
 import vans from './VansData';
 import reviews from './ReviewsData';
 
-export function MockAPI() {
+export function startMockAPI() {
   if (process.env.NODE_ENV === 'production') return;
   return createServer({
     environment: process.env.NODE_ENV,
@@ -26,4 +26,4 @@ export function MockAPI() {
   });
 }
 
-export default MockAPI;
+export default startMockAPI;

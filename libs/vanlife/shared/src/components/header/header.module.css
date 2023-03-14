@@ -3,7 +3,7 @@
   background-color: #fff7ed;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 0em 5em 0em 3em; /* top right bottom left */
 }
 

@@ -17,6 +17,8 @@ export function startMockAPI() {
     },
     routes() {
       this.urlPrefix = '/api';
+      this.timing = 0;
+      this.logging = false;
       this.get('/vans', (schema, request) => schema.all('van'));
       this.get('/vans/:id', (schema, request) =>
         schema.find('van', request.params.id)

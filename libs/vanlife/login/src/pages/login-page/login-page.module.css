@@ -1,0 +1,13 @@
+.container {
+  text-align: center;
+  padding: 2em 0em 5em;
+}
+
+.container > h1:first-of-type,
+.container > h3:first-of-type {
+  margin-bottom: 1em;
+}
+
+.container > h3:last-of-type {
+  margin-top: 1em;
+}

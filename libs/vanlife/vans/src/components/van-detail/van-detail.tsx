@@ -23,8 +23,8 @@ export function VanDetail({
   const searchParams = state ? state.search : '';
   const filterType = state ? state.filterType : 'all';
 
-  console.log({ searchParams });
-  console.log({ filterType });
+  // console.log({ searchParams });
+  // console.log({ filterType });
 
   return (
     <div className={styles['container']}>

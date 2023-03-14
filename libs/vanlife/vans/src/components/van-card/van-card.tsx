@@ -13,7 +13,6 @@ export interface VanCardProps {
 }
 
 export function VanCard({ id, name, price, imageUrl, type }: VanCardProps) {
-  //TODO: REMOVER
   const { queryString, filterType } = useVansFilter();
 
   return (

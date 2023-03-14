@@ -1,0 +1,14 @@
+.container {
+  width: 150px;
+  text-align: right;
+}
+
+.container > a {
+  font-weight: 500;
+  color: #161616;
+  text-decoration: none;
+}
+
+.container > a:hover {
+  color: #ff8c38;
+}

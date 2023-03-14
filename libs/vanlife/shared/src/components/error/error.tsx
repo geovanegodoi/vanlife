@@ -6,7 +6,6 @@ export interface ErrorProps {}
 
 export function Error(props: ErrorProps) {
   const error = useRouteError();
-  console.log(error);
   return (
     <div className={styles['container']}>
       <h1>{error.message}</h1>

@@ -13,6 +13,12 @@ import {
   VanPhotosPage,
 } from '@vanlife/vanlife/host';
 import {
+  actionLogin,
+  Authentication,
+  AuthenticationProvider,
+  LoginPage,
+} from '@vanlife/vanlife/login';
+import {
   Error,
   LayoutPage,
   NotFoundPage,
@@ -36,6 +42,7 @@ const router = createBrowserRouter(
       <Route path="*" element={<NotFoundPage />} />
       <Route index element={<HomePage />} />
       <Route path="about" element={<AboutPage />} />
+      <Route path="login" element={<LoginPage />} action={actionLogin} />
       <Route
         path="vans"
         element={<GalleryPage />}
@@ -43,16 +50,19 @@ const router = createBrowserRouter(
         errorElement={<Error />}
       />
       <Route path="vans/:id" element={<DetailPage />} />
-      <Route path="host" element={<HostLayoutPage />}>
-        <Route index element={<DashboardPage />} />
-        <Route path="income" element={<IncomePage />} />
-        <Route path="vans" element={<VansListPage />} />
-        <Route path="vans/:id" element={<VanLayoutPage />}>
-          <Route index element={<VanDetailPage />} />
-          <Route path="pricing" element={<VanPricingPage />} />
-          <Route path="photos" element={<VanPhotosPage />} />
+
+      <Route element={<Authentication />}>
+        <Route path="host" element={<HostLayoutPage />}>
+          <Route index element={<DashboardPage />} />
+          <Route path="income" element={<IncomePage />} />
+          <Route path="vans" element={<VansListPage />} />
+          <Route path="vans/:id" element={<VanLayoutPage />}>
+            <Route index element={<VanDetailPage />} />
+            <Route path="pricing" element={<VanPricingPage />} />
+            <Route path="photos" element={<VanPhotosPage />} />
+          </Route>
+          <Route path="reviews" element={<ReviewsPage />} />
         </Route>
-        <Route path="reviews" element={<ReviewsPage />} />
       </Route>
     </Route>
   )
@@ -61,29 +71,9 @@ const router = createBrowserRouter(
 export function App() {
   startMockAPI();
   return (
-    <RouterProvider router={router} />
-    // <BrowserRouter>
-    //   <Routes>
-    //     <Route path="/" element={<LayoutPage />}>
-    //       <Route path="*" element={<NotFoundPage />} />
-    //       <Route index element={<HomePage />} />
-    //       <Route path="about" element={<AboutPage />} />
-    //       <Route path="vans" element={<GalleryPage />} />
-    //       <Route path="vans/:id" element={<DetailPage />} />
-    //       <Route path="host" element={<HostLayoutPage />}>
-    //         <Route index element={<DashboardPage />} />
-    //         <Route path="income" element={<IncomePage />} />
-    //         <Route path="vans" element={<VansListPage />} />
-    //         <Route path="vans/:id" element={<VanLayoutPage />}>
-    //           <Route index element={<VanDetailPage />} />
-    //           <Route path="pricing" element={<VanPricingPage />} />
-    //           <Route path="photos" element={<VanPhotosPage />} />
-    //         </Route>
-    //         <Route path="reviews" element={<ReviewsPage />} />
-    //       </Route>
-    //     </Route>
-    //   </Routes>
-    // </BrowserRouter>
+    <AuthenticationProvider>
+      <RouterProvider router={router} />
+    </AuthenticationProvider>
   );
 }
 

@@ -9,7 +9,7 @@ import {
 } from 'react-router-dom';
 import { doLogin, retrieveFormData } from './login-page.helpers';
 import { useEffect, useState } from 'react';
-import { useAuthentication } from '../../contexts/AuthContext';
+import { useAuthentication } from '../../contexts/AuthenticationContext';
 
 /* eslint-disable-next-line */
 export interface LoginPageProps {}
@@ -35,16 +35,16 @@ export async function actionLogin({
 }
 
 export function LoginPage(props: LoginPageProps) {
+  const { loggedIn, signin } = useAuthentication();
   const actionData = useActionData() as ActionLoginData;
   const location = useLocation();
-  const { signin } = useAuthentication();
   const navigate = useNavigate();
 
   // console.log('actionData', actionData);
   // console.log('location.state', location.state);
   // console.log('navigation.location', navigation.location);
 
-  if (actionData?.token) {
+  if (loggedIn || actionData?.token) {
     const redirectUrl = location.state?.redirectUrl || '/host';
     // console.log(redirectUrl);
     signin(() => {

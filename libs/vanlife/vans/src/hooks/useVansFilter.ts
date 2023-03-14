@@ -3,7 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 export function useVansFilter() {
   const [searchParams, setSearchParams] = useSearchParams();
   const filterType = searchParams.get('type');
-  const queryString = searchParams.toString() && `?${searchParams.toString()}`;
+  const filterParams = searchParams.toString() && `?${searchParams.toString()}`;
 
   function setFilterParams(value: string) {
     setSearchParams((prev) => {
@@ -16,7 +16,7 @@ export function useVansFilter() {
     });
   }
 
-  return { filterType, queryString, setFilterParams };
+  return { filterType, filterParams };
 }
 
 export default useVansFilter;

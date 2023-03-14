@@ -1,5 +1,5 @@
 import { Navigate, Outlet, useLocation } from 'react-router-dom';
-import { useAuthentication } from '../../contexts/AuthContext';
+import { useAuthentication } from '../../contexts/AuthenticationContext';
 import styles from './authentication.module.css';
 
 /* eslint-disable-next-line */

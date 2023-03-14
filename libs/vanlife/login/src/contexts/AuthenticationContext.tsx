@@ -7,21 +7,26 @@ interface AuthenticationContextType {
 }
 
 const AuthenticationContext = createContext<AuthenticationContextType>(null!);
+const STOTAGE_KEY = 'loggedin';
 
 export function AuthenticationProvider({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(
+    localStorage.getItem(STOTAGE_KEY) as unknown as boolean
+  );
 
   const signin = (callback?: VoidFunction) => {
     setLoggedIn(true);
+    localStorage.setItem(STOTAGE_KEY, 'true');
     callback && callback();
   };
 
   const signout = (callback?: VoidFunction) => {
     setLoggedIn(false);
+    localStorage.removeItem(STOTAGE_KEY);
     callback && callback();
   };
 

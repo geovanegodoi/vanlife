@@ -13,13 +13,13 @@ export interface VanCardProps {
 }
 
 export function VanCard({ id, name, price, imageUrl, type }: VanCardProps) {
-  const { queryString, filterType } = useVansFilter();
+  const { filterType, filterParams } = useVansFilter();
 
   return (
     <div className={styles['container']}>
       <Link
         to={`${id}`}
-        state={queryString && { search: queryString, filterType: filterType }}
+        state={filterParams && { search: filterParams, filterType: filterType }}
       >
         <img className={styles['card-image']} src={imageUrl} alt={name} />
         <div className={styles['card-summary']}>

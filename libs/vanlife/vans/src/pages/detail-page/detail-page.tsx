@@ -1,25 +1,32 @@
-import { Loading, useVanData } from '@vanlife/vanlife/shared';
-import { useParams } from 'react-router-dom';
-import { VanDetail, VanDetailProps } from '../../components';
+import styles from './detail-page.module.css';
+import { getVan, LoadDeferredData } from '@vanlife/vanlife/shared';
+import { defer, LoaderFunctionArgs, useLoaderData } from 'react-router-dom';
+import { VanDetail } from '../../components';
 
 /* eslint-disable-next-line */
 export interface DetailPageProps {}
 
-export async function loaderDetailPage() {
-  const res = await fetch('/api/vans');
-  const json = await res.json();
-  const result = json.vans;
-  return result;
+export async function loaderDetailPage({ params }: LoaderFunctionArgs) {
+  if (!params.id) {
+    throw new Error('Invalid van ID');
+  }
+  const dataPromise = getVan(params.id);
+  return defer({ dataPromise });
 }
 
 export function DetailPage(props: DetailPageProps) {
-  const { id } = useParams();
-  const { loading, data } = useVanData(id);
+  /* eslint-disable-next-line */
+  /* @ts-ignore */
+  const { dataPromise } = useLoaderData();
 
   return (
-    <Loading isLoading={loading}>
-      <VanDetail {...(data as VanDetailProps)} />
-    </Loading>
+    <div className={styles['container']}>
+      <LoadDeferredData resolve={dataPromise}>
+        {(vanData) => {
+          return <VanDetail {...vanData} />;
+        }}
+      </LoadDeferredData>
+    </div>
   );
 }
 

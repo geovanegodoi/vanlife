@@ -14,11 +14,10 @@ export function Error(props: ErrorProps) {
         <b>Type ...:</b> {error.name}
       </pre>
       <pre>
-        <b>Source .:</b>{' '}
-        {error.sourceURL.substring(error.sourceURL.lastIndexOf('/') + 1)}
+        <b>Line ...:</b> {error.code}
       </pre>
       <pre>
-        <b>Line ...:</b> {error.code}
+        <b>Source .:</b> {error.sourceURL}
       </pre>
     </div>
   );

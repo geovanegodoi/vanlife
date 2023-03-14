@@ -11,6 +11,8 @@ import {
   VanLayoutPage,
   VanPricingPage,
   VanPhotosPage,
+  loaderVansList,
+  loaderVanLayoutPage,
 } from '@vanlife/vanlife/host';
 import {
   actionLogin,
@@ -18,15 +20,11 @@ import {
   AuthenticationProvider,
   LoginPage,
 } from '@vanlife/vanlife/login';
-import {
-  Error,
-  LayoutPage,
-  NotFoundPage,
-  startMockAPI,
-} from '@vanlife/vanlife/shared';
+import { Error, LayoutPage, NotFoundPage } from '@vanlife/vanlife/shared';
 import {
   DetailPage,
   GalleryPage,
+  loaderDetailPage,
   loaderGalleryPage,
 } from '@vanlife/vanlife/vans';
 import {
@@ -49,14 +47,27 @@ const router = createBrowserRouter(
         loader={loaderGalleryPage}
         errorElement={<Error />}
       />
-      <Route path="vans/:id" element={<DetailPage />} />
+      <Route
+        path="vans/:id"
+        element={<DetailPage />}
+        loader={loaderDetailPage}
+        errorElement={<Error />}
+      />
 
       <Route element={<Authentication />}>
         <Route path="host" element={<HostLayoutPage />}>
-          <Route index element={<DashboardPage />} />
+          <Route index element={<DashboardPage />} loader={loaderVansList} />
           <Route path="income" element={<IncomePage />} />
-          <Route path="vans" element={<VansListPage />} />
-          <Route path="vans/:id" element={<VanLayoutPage />}>
+          <Route
+            path="vans"
+            element={<VansListPage />}
+            loader={loaderVansList}
+          />
+          <Route
+            path="vans/:id"
+            element={<VanLayoutPage />}
+            loader={loaderVanLayoutPage}
+          >
             <Route index element={<VanDetailPage />} />
             <Route path="pricing" element={<VanPricingPage />} />
             <Route path="photos" element={<VanPhotosPage />} />
@@ -69,7 +80,6 @@ const router = createBrowserRouter(
 );
 
 export function App() {
-  startMockAPI();
   return (
     <AuthenticationProvider>
       <RouterProvider router={router} />

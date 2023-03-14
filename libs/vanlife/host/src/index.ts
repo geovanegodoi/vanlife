@@ -7,3 +7,4 @@ export * from './pages/van-layout-page/van-layout-page';
 export * from './pages/van-photos-page/van-photos-page';
 export * from './pages/van-pricing-page/van-pricing-page';
 export * from './pages/vans-list-page/vans-list-page';
+export { loaderVansList } from './components';

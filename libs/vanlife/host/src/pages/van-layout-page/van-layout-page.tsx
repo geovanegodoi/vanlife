@@ -1,47 +1,43 @@
 import styles from './van-layout-page.module.css';
 import ReturnImg from '../../assets/goback.svg';
-import { Link, Outlet, useParams } from 'react-router-dom';
 import {
-  Loading,
-  Navbar,
-  NavbarOptions,
-  useVanData,
-} from '@vanlife/vanlife/shared';
-import { VanDetailHeader, VanDetailHeaderProps } from '../../components';
+  defer,
+  Link,
+  LoaderFunctionArgs,
+  Outlet,
+  useLoaderData,
+} from 'react-router-dom';
+import { LoadDeferredData, getVan, Navbar } from '@vanlife/vanlife/shared';
+import { VanDetailHeader } from '../../components';
+import { hostOptions } from './van-layout-page.helper';
 
 /* eslint-disable-next-line */
 export interface VanLayoutPageProps {}
 
-const options = [
-  {
-    text: 'Details',
-    target: '',
-    end: true,
-  },
-  {
-    text: 'Pricing',
-    target: 'pricing',
-  },
-  {
-    text: 'Photos',
-    target: 'photos',
-  },
-] as NavbarOptions;
+export function loaderVanLayoutPage({ params }: LoaderFunctionArgs) {
+  const dataPromise = getVan(params.id);
+  return defer({ dataPromise });
+}
 
 export function VanLayoutPage(props: VanLayoutPageProps) {
-  const { id } = useParams();
-  const { loading, data } = useVanData(id);
+  /* eslint-disable-next-line */
+  /* @ts-ignore */
+  const { dataPromise } = useLoaderData();
 
   return (
     <div className={styles['container']}>
       <ReturnLink />
-      <div className={styles['van-detail-container']}>
-        <Loading isLoading={loading}>
-          <VanDetailHeader {...(data as VanDetailHeaderProps)} />
-          <Navbar options={options} />
-          <Outlet context={data} />
-        </Loading>
-      </div>
+      <LoadDeferredData resolve={dataPromise}>
+        {(vanData) => {
+          return (
+            <div className={styles['van-detail-container']}>
+              <VanDetailHeader {...vanData} />
+              <Navbar options={hostOptions} />
+              <Outlet context={vanData} />
+            </div>
+          );
+        }}
+      </LoadDeferredData>
     </div>
   );
 }

@@ -1,26 +1,37 @@
-import { Loading } from '@vanlife/vanlife/shared';
+import { getHostVans, LoadDeferredData } from '@vanlife/vanlife/shared';
+import { defer, useLoaderData } from 'react-router-dom';
 import HostListVanCard, {
   HostListVanCardProps,
 } from '../host-list-van-card/host-list-van-card';
 import styles from './host-list-vans.module.css';
 
 /* eslint-disable-next-line */
-export interface HostListVansProps {
-  items: HostListVanCardProps[];
-  isLoading: boolean;
+export interface HostListVansProps {}
+
+export async function loaderVansList() {
+  const dataPromise = getHostVans();
+  return defer({ dataPromise });
 }
 
-export function HostListVans({ items, isLoading }: HostListVansProps) {
+export function HostListVans(props: HostListVansProps) {
+  /* eslint-disable-next-line */
+  /* @ts-ignore */
+  const { dataPromise } = useLoaderData();
+
   return (
-    <Loading isLoading={isLoading}>
-      <div className={styles['container']}>
-        <div>
-          {items.map((item, index) => (
-            <HostListVanCard key={index} {...item} />
-          ))}
-        </div>
-      </div>
-    </Loading>
+    <div className={styles['container']}>
+      <LoadDeferredData resolve={dataPromise}>
+        {(vansData) => {
+          return (
+            <div>
+              {vansData.map((item: HostListVanCardProps, index: number) => (
+                <HostListVanCard key={index} {...item} />
+              ))}
+            </div>
+          );
+        }}
+      </LoadDeferredData>
+    </div>
   );
 }
 

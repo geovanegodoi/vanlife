@@ -1,6 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { AboutPage } from '@vanlife/vanlife/about';
-import { HomePage } from '@vanlife/vanlife/home';
+import { AboutPage } from 'libs/about/src';
+import { HomePage } from '@vanlife/home';
 import {
   HostLayoutPage,
   DashboardPage,
@@ -13,20 +13,21 @@ import {
   VanPhotosPage,
   loaderVansList,
   loaderVanLayoutPage,
-} from '@vanlife/vanlife/host';
+} from '@vanlife/host';
 import {
   actionLogin,
   Authentication,
   AuthenticationProvider,
   LoginPage,
-} from '@vanlife/vanlife/login';
-import { Error, LayoutPage, NotFoundPage } from '@vanlife/vanlife/shared';
+  Logout,
+} from '@vanlife/login';
+import { Error, LayoutPage, NotFoundPage } from '@vanlife/shared';
 import {
   DetailPage,
   GalleryPage,
   loaderDetailPage,
   loaderGalleryPage,
-} from '@vanlife/vanlife/vans';
+} from '@vanlife/vans';
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -36,7 +37,7 @@ import {
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<LayoutPage />}>
+    <Route path="/" element={<LayoutPage logout={<Logout />} />}>
       <Route path="*" element={<NotFoundPage />} />
       <Route index element={<HomePage />} />
       <Route path="about" element={<AboutPage />} />

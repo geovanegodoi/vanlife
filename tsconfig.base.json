@@ -15,15 +15,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@vanlife/vanlife/about": ["libs/vanlife/about/src/index.ts"],
-      "@vanlife/vanlife/home": ["libs/vanlife/home/src/index.ts"],
-      "@vanlife/vanlife/host": ["libs/vanlife/host/src/index.ts"],
-      "@vanlife/vanlife/login": ["libs/vanlife/login/src/index.ts"],
-      "@vanlife/vanlife/shared": ["libs/vanlife/shared/src/index.ts"],
-      "@vanlife/vanlife/shared/shared": [
-        "libs/vanlife/shared/shared/src/index.ts"
-      ],
-      "@vanlife/vanlife/vans": ["libs/vanlife/vans/src/index.ts"]
+      "@vanlife/about": ["libs/about/src/index.ts"],
+      "@vanlife/home": ["libs/home/src/index.ts"],
+      "@vanlife/host": ["libs/host/src/index.ts"],
+      "@vanlife/login": ["libs/login/src/index.ts"],
+      "@vanlife/shared": ["libs/shared/src/index.ts"],
+      "@vanlife/vans": ["libs/vans/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

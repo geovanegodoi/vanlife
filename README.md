@@ -33,28 +33,28 @@ vanlife
 └── libs/
 ├── vanfile
 │ ├── home
+│ │ ├── components
 │ │ ├── pages
-│ │ ├── ui
 │ │ ├── data-access
 │ │ └── utilities
 │ ├── about
+│ │ ├── components
 │ │ ├── pages
-│ │ ├── ui
 │ │ ├── data-access
 │ │ └── utilities
 │ ├── vans
+│ │ ├── components
 │ │ ├── pages
-│ │ ├── ui
 │ │ ├── data-access
 │ │ └── utilities
 │ ├── host
+│ │ ├── components
 │ │ ├── pages
-│ │ ├── ui
 │ │ ├── data-access
 │ │ └── utilities
 │ └── shared
+│ ├── components
 │ ├── pages
-│ ├── ui
 │ ├── data-access
 │ └── utilities
 └── shared

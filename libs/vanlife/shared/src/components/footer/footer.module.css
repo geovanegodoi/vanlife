@@ -1,0 +1,17 @@
+.container {
+  height: 75px;
+  background-color: #252525;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 23px;
+  color: #aaaaaa;
+}
+
+@media (max-width: 768px) {
+}

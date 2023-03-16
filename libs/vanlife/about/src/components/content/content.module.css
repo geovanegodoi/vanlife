@@ -1,0 +1,15 @@
+.about-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #161616;
+  text-align: justify;
+}
+
+.about-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #161616;
+  text-align: justify;
+}

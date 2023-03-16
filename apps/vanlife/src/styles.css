@@ -10,8 +10,8 @@ body::-webkit-scrollbar {
 }
 
 body {
-  margin-left: 15em;
-  margin-right: 15em;
+  width: 80%;
+  margin: auto;
   font-family: 'Inter';
   font-style: normal;
 }

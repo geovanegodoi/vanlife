@@ -1,0 +1,21 @@
+.container {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 10px;
+}
+
+.container > a {
+  font-weight: 500;
+  color: #161616;
+  text-decoration: none;
+}
+
+.container > a:hover {
+  color: #ff8c38;
+}
+
+.container > img {
+  width: 18px;
+}

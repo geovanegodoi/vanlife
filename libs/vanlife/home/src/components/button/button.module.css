@@ -1,0 +1,23 @@
+.container > button {
+  z-index: 1;
+  border: 0;
+  width: 50vw;
+  height: 50px;
+  background: #ff8c38;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 15.9462px;
+  line-height: 32px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.container > button:hover {
+  background: #e17654;
+}
+
+@media (min-width: 1441px) {
+  .container > button {
+    width: 30vw;
+  }
+}

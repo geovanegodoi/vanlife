@@ -1,0 +1,39 @@
+:root {
+  --header-height: 110px;
+  --footer-height: 75px;
+  --header-footer-height: calc(var(--header-height) + var(--footer-height));
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  height: calc(100vh - var(--header-footer-height));
+}
+
+.container img {
+  position: relative;
+  z-index: 0;
+  top: -5%;
+  left: -5%;
+  width: 110%;
+  height: 110%;
+  object-fit: cover;
+}
+
+.content {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7%;
+  text-align: center;
+  padding: 10%;
+}
+
+.content button {
+  margin-top: 10%;
+}

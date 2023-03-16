@@ -1,6 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { AboutPage } from 'libs/about/src';
 import { HomePage } from '@vanlife/home';
+import { AboutPage } from '@vanlife/about';
 import {
   HostLayoutPage,
   DashboardPage,
@@ -13,6 +13,7 @@ import {
   VanPhotosPage,
   loaderVansList,
   loaderVanLayoutPage,
+  loaderReviewsPage,
 } from '@vanlife/host';
 import {
   actionLogin,
@@ -73,7 +74,11 @@ const router = createBrowserRouter(
             <Route path="pricing" element={<VanPricingPage />} />
             <Route path="photos" element={<VanPhotosPage />} />
           </Route>
-          <Route path="reviews" element={<ReviewsPage />} />
+          <Route
+            path="reviews"
+            element={<ReviewsPage />}
+            loader={loaderReviewsPage}
+          />
         </Route>
       </Route>
     </Route>

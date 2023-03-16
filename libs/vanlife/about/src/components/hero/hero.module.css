@@ -1,0 +1,32 @@
+.container {
+  height: 150px;
+  background: #ffcc8d;
+  border-radius: 5px;
+  padding: 1% 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.hero-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #161616;
+}
+
+.hero-button {
+  border: 0;
+  width: 170px;
+  height: 49px;
+  background-color: #161616;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 15.9462px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.hero-button:hover {
+  background: #e17654;
+}

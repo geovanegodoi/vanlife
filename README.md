@@ -8,6 +8,10 @@
 
 Run `nx serve vanlife` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
+## Production environment
+
+Access the link https://ggodoi-vanlife.web.app.
+
 ## Understand this workspace
 
 Run `nx graph` to see a diagram of the dependencies of the projects.
@@ -59,3 +63,13 @@ vanlife
 │ └── utilities
 └── shared
 ```
+
+## Technologies
+- REACT
+- [Typescript](https://www.typescriptlang.org)
+- [VITE](https://vitejs.dev)
+- [ESLint](https://eslint.org)
+- [NX](https://nx.dev)
+- [React Router 6] (https://reactrouter.com/en/main)
+- [Miragejs] (https://miragejs.com)
+- [Firebase] (https://firebase.google.com)

@@ -11,12 +11,12 @@ import {
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: 'AIzaSyBgrABdgI7v5knf-j0lgz8fxnOM3kGorNU',
-  authDomain: 'van-life-3ffdc.firebaseapp.com',
-  projectId: 'van-life-3ffdc',
-  storageBucket: 'van-life-3ffdc.appspot.com',
-  messagingSenderId: '1060412556710',
-  appId: '1:1060412556710:web:296ff6ea49eac207d9bb67',
+  apiKey: 'AIzaSyBgpEf5hPrQjys6X3cl5DdQQ_tUoCY4-2Y',
+  authDomain: 'ggodoi-vanlife.firebaseapp.com',
+  projectId: 'ggodoi-vanlife',
+  storageBucket: 'ggodoi-vanlife.appspot.com',
+  messagingSenderId: '101964794527',
+  appId: '1:101964794527:web:a634fdd8e9b6532b7df0aa',
 };
 
 // Initialize Firebase

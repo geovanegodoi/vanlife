@@ -1,6 +1,4 @@
-.van-type-badge-simple,
-.van-type-badge-rugged,
-.van-type-badge-luxury {
+.van-type-badge {
   width: 90px;
   height: 35px;
   border-radius: 5px;
@@ -11,16 +9,17 @@
   align-items: center;
   justify-content: center;
   color: #ffffff;
+  text-transform: capitalize;
 }
 
-.van-type-badge-simple {
+.simple {
   background: #e17654;
 }
 
-.van-type-badge-rugged {
+.rugged {
   background: #115e59;
 }
 
-.van-type-badge-luxury {
+.luxury {
   background: #161616;
 }

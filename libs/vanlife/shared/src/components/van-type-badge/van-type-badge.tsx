@@ -8,7 +8,7 @@ export interface VanTypeBadgeProps {
 
 export function VanTypeBadge({ type }: VanTypeBadgeProps) {
   return (
-    <span className={styles[`van-type-badge-${type && type.toLowerCase()}`]}>
+    <span className={`${styles['van-type-badge']} ${styles[type]}`}>
       {type}
     </span>
   );

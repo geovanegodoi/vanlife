@@ -1,6 +1,7 @@
 {
   "name": "vanlife",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "root": "apps/vanlife",
   "sourceRoot": "apps/vanlife/src",
   "projectType": "application",
   "targets": {

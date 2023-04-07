@@ -1,0 +1,32 @@
+.income-head {
+  padding: 2em 3em 0em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 22px;
+  color: #161616;
+}
+
+.last-days {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #4d4d4d;
+}
+
+.last-days > span {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.income-value {
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 38px;
+  color: #161616;
+}

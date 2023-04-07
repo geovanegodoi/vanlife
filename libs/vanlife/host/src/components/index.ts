@@ -5,3 +5,5 @@ export * from './overall-rating/overall-rating';
 export * from './review-title/review-title';
 export * from './van-detail-header/van-detail-header';
 export * from './detail-label/detail-label';
+export * from './income-head/income-head';
+export * from './income-history/income-history';

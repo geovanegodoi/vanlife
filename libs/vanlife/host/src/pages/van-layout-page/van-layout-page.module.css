@@ -1,5 +1,6 @@
 .container {
   padding: 1em 3em;
+  background: #fff7ed;
 }
 
 .container > a {

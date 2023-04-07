@@ -14,7 +14,7 @@ export function DashboardIncome(props: DashboardIncomeProps) {
         </p>
         <p className={styles['dashboard-content-income']}>$2,260</p>
       </div>
-      <Link to="">Details</Link>
+      <Link to="/host/income">Details</Link>
     </div>
   );
 }

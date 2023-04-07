@@ -20,7 +20,7 @@ function HostListVansTitle() {
   return (
     <div className={styles['list-title-container']}>
       <p className={styles['list-title']}>Your listed vans</p>
-      <Link className={styles['link-view-all']} to="">
+      <Link className={styles['link-view-all']} to="/host/vans">
         View all
       </Link>
     </div>

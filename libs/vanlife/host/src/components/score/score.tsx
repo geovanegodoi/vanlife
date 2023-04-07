@@ -17,7 +17,7 @@ export function Score(props: ScoreProps) {
           </p>
         </div>
       </div>
-      <Link to="">Details</Link>
+      <Link to="/host/reviews">Details</Link>
     </div>
   );
 }
